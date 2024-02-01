@@ -158,14 +158,13 @@ public class Cereal {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] fields = line.split(",");
-                if (fields.length >= 2) { // Assuming at least two fields (name and health score)
+                if (fields.length >= 2) {
                     String name = fields[0].trim();
                     double healthScore = Double.parseDouble(fields[1].trim());
                 }
-                // You can handle other fields as needed
             }
         } catch (IOException | NumberFormatException e) {
-            e.printStackTrace(); // Handle the exception according to your needs
+            e.printStackTrace();
         }
 
         return cereals;
